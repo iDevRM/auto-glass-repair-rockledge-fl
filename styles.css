@@ -1,0 +1,195 @@
+/* Rockledge Auto Glass Repair - styles.css */
+:root{
+  --ink:#10201d;
+  --pine:#103a34;
+  --pine-2:#174d45;
+  --river:#1e6f8f;
+  --sun:#f2b705;
+  --sun-dark:#d49f00;
+  --coquina:#efe4cf;
+  --sand:#fbf8f2;
+  --muted:#4d5b58;
+  --line:#e2dccf;
+  --white:#ffffff;
+  --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--sand);line-height:1.65;font-size:17px}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:50;background:var(--pine);border-bottom:3px solid var(--sun)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:66px}
+.brand{color:var(--white);text-decoration:none;font-weight:800;font-size:19px;letter-spacing:-.2px;line-height:1.15}
+.brand span{color:var(--sun)}
+.links{display:flex;gap:22px;list-style:none}
+.links a{color:#d7e6e2;text-decoration:none;font-size:15px;font-weight:600}
+.links a:hover{color:var(--white)}
+.nav-call{background:var(--sun);color:var(--ink);text-decoration:none;font-weight:800;padding:10px 16px;border-radius:999px;font-size:15px;white-space:nowrap}
+.nav-call:hover{background:var(--sun-dark)}
+
+/* HERO */
+.hero{background:linear-gradient(160deg,var(--pine) 0%,var(--pine-2) 60%,#1c5a63 100%);color:var(--white);padding:52px 0 56px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:start}
+.tag{display:inline-block;background:rgba(242,183,5,.16);color:var(--sun);border:1px solid rgba(242,183,5,.45);font-size:13px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;padding:6px 12px;border-radius:6px;margin-bottom:16px}
+.hero h1{font-size:42px;line-height:1.12;font-weight:850;letter-spacing:-.6px;margin-bottom:16px}
+.hero p.lead{font-size:18px;color:#d9e8e4;max-width:560px;margin-bottom:22px}
+.hero-points{list-style:none;margin:0 0 26px;display:grid;gap:8px}
+.hero-points li{padding-left:26px;position:relative;color:#e8f1ef;font-size:16px}
+.hero-points li:before{content:"\2713";position:absolute;left:0;color:var(--sun);font-weight:900}
+.btn{display:inline-block;text-decoration:none;font-weight:800;border-radius:10px;padding:14px 22px;font-size:17px}
+.btn-sun{background:var(--sun);color:var(--ink)}
+.btn-sun:hover{background:var(--sun-dark)}
+.btn-pine{background:var(--pine);color:var(--white)}
+.btn-pine:hover{background:var(--pine-2)}
+.call-big{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.call-big small{color:#b9d0cb;font-size:14px}
+
+/* QUOTE CARD */
+.quote{background:var(--white);color:var(--ink);border-radius:var(--radius);padding:24px;box-shadow:0 18px 40px rgba(0,0,0,.25)}
+.quote h2{font-size:21px;line-height:1.25;margin-bottom:4px}
+.quote .sub{color:var(--muted);font-size:14px;margin-bottom:14px}
+.field{margin-bottom:11px}
+.field label{display:block;font-size:13px;font-weight:700;margin-bottom:4px;color:var(--ink)}
+.field input,.field select,.field textarea{width:100%;font:inherit;font-size:15px;padding:10px 12px;border:1px solid #cfc8b8;border-radius:8px;background:#fffdf9;color:var(--ink)}
+.field textarea{min-height:70px;resize:vertical}
+.quote button,.form-full button{width:100%;border:0;cursor:pointer;background:var(--pine);color:var(--white);font-weight:800;font-size:16px;padding:13px;border-radius:10px;margin-top:4px}
+.quote button:hover,.form-full button:hover{background:var(--river)}
+.quote .alt{font-size:14px;color:var(--muted);text-align:center;margin-top:10px}
+.quote .alt a{color:var(--river);font-weight:700}
+
+/* PHOTO BAND */
+.band{background:var(--pine);padding:0 0 0}
+.band img{width:100%;height:420px;object-fit:cover}
+.band.short img{height:340px}
+
+/* SECTIONS */
+.sec{padding:64px 0}
+.sec.alt{background:var(--white)}
+.sec.coq{background:var(--coquina)}
+.sec h2{font-size:31px;line-height:1.2;letter-spacing:-.4px;margin-bottom:14px;color:var(--pine)}
+.sec h3{font-size:20px;line-height:1.3;margin:22px 0 8px;color:var(--ink)}
+.sec p{margin-bottom:14px;max-width:760px}
+.kicker{font-size:13px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--river);margin-bottom:8px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.two img{border-radius:var(--radius);box-shadow:0 10px 30px rgba(16,58,52,.18);width:100%;height:auto}
+.body-link{color:#2563eb;text-decoration:underline}
+
+/* SIGNS LIST */
+.signs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+.sign{background:var(--white);border:1px solid var(--line);border-left:5px solid var(--sun);border-radius:10px;padding:16px 18px}
+.sec.alt .sign{background:var(--sand)}
+.sign strong{display:block;margin-bottom:4px;color:var(--pine)}
+.sign p{margin:0;font-size:16px;color:var(--muted)}
+
+/* TIMELINE */
+.steps{list-style:none;margin-top:22px;border-left:3px solid var(--sun);padding-left:26px;display:grid;gap:22px;max-width:780px}
+.steps li{position:relative}
+.steps li:before{content:attr(data-n);position:absolute;left:-44px;top:0;width:32px;height:32px;border-radius:50%;background:var(--pine);color:var(--sun);font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center}
+.steps strong{display:block;color:var(--pine);font-size:18px;margin-bottom:2px}
+.steps p{margin:0;color:var(--muted)}
+
+/* CARDS */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:26px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;text-decoration:none;color:var(--ink);display:flex;flex-direction:column}
+.card img{width:100%;height:190px;object-fit:cover}
+.card .cb{padding:18px 18px 20px}
+.card h3{margin:0 0 6px;font-size:19px;color:var(--pine)}
+.card p{margin:0;font-size:15px;color:var(--muted)}
+.card .more{display:inline-block;margin-top:10px;font-weight:800;color:var(--river);font-size:15px}
+.card:hover{box-shadow:0 10px 26px rgba(16,58,52,.15)}
+
+/* WHY */
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:22px}
+.why div{background:var(--pine);color:#dceae6;border-radius:var(--radius);padding:22px}
+.why strong{display:block;color:var(--sun);font-size:18px;margin-bottom:6px}
+.why p{margin:0;font-size:15.5px}
+
+/* FIT */
+.fit{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}
+.fit div{border-radius:var(--radius);padding:22px;border:1px solid var(--line);background:var(--white)}
+.fit h3{margin-top:0}
+.fit ul{padding-left:20px}
+.fit li{margin-bottom:6px}
+.fit .yes{border-top:5px solid #2f8f5b}
+.fit .no{border-top:5px solid #b4533a}
+
+/* TABLE */
+.cmp{width:100%;border-collapse:collapse;margin-top:18px;background:var(--white);border-radius:10px;overflow:hidden;font-size:16px}
+.cmp th,.cmp td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+.cmp th{background:var(--pine);color:var(--white);font-size:15px}
+.cmp tr:last-child td{border-bottom:0}
+
+/* FAQ */
+.faq{margin-top:20px;max-width:860px}
+.faq details{background:var(--white);border:1px solid var(--line);border-radius:10px;margin-bottom:10px;padding:0 18px}
+.sec.alt .faq details{background:var(--sand)}
+.faq summary{cursor:pointer;list-style:none;padding:16px 26px 16px 0;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";position:absolute;right:0;top:12px;font-size:24px;color:var(--river);font-weight:700}
+.faq details[open] summary:after{content:"\2013"}
+.faq summary h3{display:inline;font-size:18px;margin:0;color:var(--pine)}
+.faq .ans{padding:0 0 16px}
+.faq .ans p{margin:0;color:var(--muted)}
+
+/* SERVICES PAGE BLOCKS */
+.svc{display:grid;grid-template-columns:320px 1fr;gap:30px;align-items:start;padding:30px 0;border-bottom:1px solid var(--line)}
+.svc:last-child{border-bottom:0}
+.svc img{border-radius:12px;width:100%;height:220px;object-fit:cover}
+.svc h2{font-size:26px;margin-bottom:10px}
+
+/* MAP */
+.note{max-width:680px;margin:0 auto 22px;padding:14px 18px;background:var(--coquina);border-left:4px solid var(--sun);border-radius:8px;font-size:15px;color:var(--muted);text-align:left;line-height:1.6}
+.mapbox{border-radius:14px;overflow:hidden;box-shadow:0 8px 26px rgba(0,0,0,.12);max-width:980px;margin:0 auto}
+.mapbox iframe{border:0;display:block;width:100%;height:420px}
+
+/* CONTACT */
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+.info{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.info dt{font-weight:800;color:var(--pine);margin-top:12px}
+.info dt:first-child{margin-top:0}
+.info dd{color:var(--muted)}
+.form-full{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+
+/* CTA */
+.cta{background:var(--sun);padding:46px 0;text-align:center}
+.cta h2{font-size:30px;line-height:1.2;color:var(--ink);margin-bottom:8px}
+.cta p{color:#3a3205;margin:0 auto 18px;max-width:640px}
+.cta .btn-pine{font-size:19px}
+
+/* FOOTER */
+.foot{background:#0b2924;color:#a9c2bc;padding:46px 0 24px;font-size:15px}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:30px}
+.foot h4{color:var(--white);font-size:16px;margin-bottom:10px}
+.foot a{color:#e7f0ee}
+.foot ul{list-style:none}
+.foot li{margin-bottom:5px}
+.foot .tel{color:var(--sun);font-weight:800;font-size:18px;text-decoration:none}
+.copy{border-top:1px solid #1f4740;margin-top:28px;padding-top:16px;font-size:13px;color:#7f9c96}
+
+/* RESPONSIVE */
+@media (max-width:960px){
+  .hero-grid,.two,.info-grid{grid-template-columns:1fr}
+  .cards,.why{grid-template-columns:1fr 1fr}
+  .svc{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .links{display:none}
+}
+@media (max-width:620px){
+  body{font-size:16px}
+  .hero{padding:34px 0 40px}
+  .hero h1{font-size:31px}
+  .sec{padding:46px 0}
+  .sec h2{font-size:25px}
+  .signs,.cards,.why,.fit,.foot-grid{grid-template-columns:1fr}
+  .band img{height:240px}
+  .band.short img{height:220px}
+  .brand{font-size:16px}
+  .nav-call{padding:9px 12px;font-size:14px}
+  .cmp{font-size:14px}
+  .cmp th,.cmp td{padding:9px 8px}
+  .mapbox iframe{height:320px}
+}
